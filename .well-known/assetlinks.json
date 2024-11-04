@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.pentlandfirth.whizcart.dev",
+      "sha256_cert_fingerprints": [
+        "DA:F2:F7:FC:3E:75:35:C5:07:D0:CF:B8:E6:E8:9D:DD:5C:AE:86:4A:88:C5:77:EC:30:F1:34:68:ED:75:28:89",
+        "F5:DD:C8:52:CB:1F:F7:3C:EC:75:B4:05:22:EA:67:9F:8A:9F:B5:3A:BD:95:B5:DF:AD:1E:04:D9:C0:79:3D:E8"
+      ]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.pentlandfirth.whizcart.dev.debug",
+      "sha256_cert_fingerprints": [
+        "B9:42:22:90:FF:83:B2:9D:0A:F8:FE:67:BB:8B:C8:63:C1:E2:64:38:20:CD:09:2E:6B:88:33:72:17:45:57:89"
+      ]
+    }
+  }
+]
