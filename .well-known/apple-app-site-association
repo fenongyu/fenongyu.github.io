@@ -3,12 +3,6 @@
     "apps": [],
     "details": [
       {
-        "appID": "HU6B6E9383.com.pentlandfirth.whizcart.dev",
-        "paths": [
-          "/app/plf-dev/*"
-        ]
-      },
-      {
         "appID": "HU6B6E9383.com.pentlandfirth.whizcart.test",
         "paths": [
           "/app/plf-test/*"
