@@ -3,9 +3,9 @@
     "apps": [],
     "details": [
       {
-        "appID": "HU6B6E9383.com.pentlandfirth.whizcart.dev",
+        "appID": "HU6B6E9383.com.pentlandfirth.whizcart",
         "paths": [
-          "/app/plf-dev/*"
+          "/app/*"
         ]
       },
       {
@@ -13,13 +13,27 @@
         "paths": [
           "/app/plf-test/*"
         ]
+      },
+      {
+        "appID": "HU6B6E9383.com.pentlandfirth.whizcart.plfdemo",
+        "paths": [
+          "/app/plf-test/*"
+        ]
+      },
+      {
+        "appID": "HU6B6E9383.com.pentlandfirth.whizcart.dev",
+        "paths": [
+          "/app/plf-dev/*"
+        ]
       }
     ]
   },
   "webcredentials": {
     "apps": [
-      "HU6B6E9383.com.pentlandfirth.whizcart.dev",
-      "HU6B6E9383.com.pentlandfirth.whizcart.test"
+      "HU6B6E9383.com.pentlandfirth.whizcart",
+      "HU6B6E9383.com.pentlandfirth.whizcart.test",
+      "HU6B6E9383.com.pentlandfirth.whizcart.plfdemo",
+      "HU6B6E9383.com.pentlandfirth.whizcart.dev"
     ]
   }
 }
