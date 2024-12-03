@@ -11,7 +11,7 @@
       {
         "appID": "HU6B6E9383.com.pentlandfirth.whizcart.test",
         "paths": [
-          "/app/*"
+          "/app/plf-test/*"
         ]
       }
     ]
