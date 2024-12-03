@@ -5,12 +5,6 @@
       {
         "appID": "HU6B6E9383.com.pentlandfirth.whizcart.test",
         "paths": [
-          "/app/plf-dev/*"
-        ]
-      },
-      {
-        "appID": "HU6B6E9383.com.pentlandfirth.whizcart.test",
-        "paths": [
           "/app/plf-test/*"
         ]
       }
@@ -18,7 +12,6 @@
   },
   "webcredentials": {
     "apps": [
-      "HU6B6E9383.com.pentlandfirth.whizcart.dev",
       "HU6B6E9383.com.pentlandfirth.whizcart.test"
     ]
   }
