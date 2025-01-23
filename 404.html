@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script>
+    <script type="text/javascript">
+        var pathname = window.location.pathname;
         if (window.location.hostname == "https://fenongyu.github.io" &&
-                window.location.pathname == "app") {
+                pathname.startsWith('/app/')) {
                 window.location.href = 'http://www.morgancc.edu/m/';
             }
     </script>
