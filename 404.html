@@ -5,7 +5,9 @@
         var pathname = window.location.pathname;
         if (window.location.hostname == "https://fenongyu.github.io" &&
                 pathname.startsWith('/app/')) {
-                window.location.href = 'http://www.morgancc.edu/m/';
+                    window.alert(pathname);
+                    window.location.href = 'http://www.morgancc.edu/m/';
+                    window.alert('hello');
             }
     </script>
 </head>
