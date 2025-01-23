@@ -10,7 +10,7 @@
         var hostname = window.location.hostname;
         var pathname = window.location.pathname;
 
-        //var plfDev = '/app/plf-dev/';
+        var plfDev = '/app/plf-dev/';
         //var plfTest = '/app/plf-test/';
         //var plfProd = '/app/'
     
@@ -18,17 +18,18 @@
     
         if (hostname == "fenongyu.github.io" && pathname.startsWith('/app/')) {
             window.alert('https://' + hostname + '/app/');
-            return window.location.href = 'https://' + hostname + '/app/';
+            //window.location.href = 'https://pentlandfirth.com/en/';
+            window.location.href = 'https://' + hostname + '/app/';
         }
 
         if (hostname == "fenongyu.github.io" && pathname.startsWith('/app/plf-test/')) {
             window.alert('https://' + hostname + '/app/plf-test/');
-            return window.location.href = 'https://' + hostname + '/app/plf-test/';
+            window.location.href = 'https://' + hostname + '/app/plf-test/';
         }
 
-        if (hostname == "fenongyu.github.io" && pathname.startsWith('/app/plf-dev/')) {
-            window.alert('https://' + hostname + '/app/plf-dev/');
-            return window.location.href = 'https://' + hostname + '/app/plf-dev/';
+        if (hostname == "fenongyu.github.io" && pathname.startsWith(plfDev)) {
+            window.alert('https://' + hostname + plfDev);
+            window.location.href = 'https://' + hostname + plfDev;
         }
 
     </script>
