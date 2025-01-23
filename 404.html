@@ -7,28 +7,23 @@
     <h1>Hello World 404</h1>
     <p>I'm hosted with GitHub Pages.</p>
     <script type="text/javascript">
+        var domain = 'fenongyu.github.io';
         var hostname = window.location.hostname;
         var pathname = window.location.pathname;
 
+        var plfProd = '/app/';
+        var plfTest = '/app/plf-test/';
         var plfDev = '/app/plf-dev/';
-        //var plfTest = '/app/plf-test/';
-        //var plfProd = '/app/'
-    
-        window.alert(hostname + ' path:' + pathname);
-    
-        if (hostname == "fenongyu.github.io" && pathname.startsWith('/app/')) {
-            window.alert('https://' + hostname + '/app/');
-            //window.location.href = 'https://pentlandfirth.com/en/';
-            window.location.href = 'https://' + hostname + '/app/';
+        
+        if (hostname == domain && pathname.startsWith(plfProd)) {
+            window.location.href = 'https://' + hostname + plfProd;
         }
 
-        if (hostname == "fenongyu.github.io" && pathname.startsWith('/app/plf-test/')) {
-            window.alert('https://' + hostname + '/app/plf-test/');
-            window.location.href = 'https://' + hostname + '/app/plf-test/';
+        if (hostname == domain && pathname.startsWith(plfTest)) {
+            window.location.href = 'https://' + hostname + plfTest;
         }
 
-        if (hostname == "fenongyu.github.io" && pathname.startsWith(plfDev)) {
-            window.alert('https://' + hostname + plfDev);
+        if (hostname == domain && pathname.startsWith(plfDev)) {
             window.location.href = 'https://' + hostname + plfDev;
         }
 
