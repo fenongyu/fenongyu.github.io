@@ -13,27 +13,24 @@
         var plfDev = '/app/plf-dev/';
         var plfTest = '/app/plf-test/';
         var plfProd = '/app/'
-        //window.alert(hostname + 'path::' + pathname);
-        if (hostname == "fenongyu.github.io" &&
-            pathname.startsWith(plfProd)) {
+    
+        window.alert(hostname + ' path:' + pathname + ' pathname: ' + plfProd);
+        if (hostname == "fenongyu.github.io" && pathname.startsWith(plfProd)) {
             window.alert('https://' + hostname + plfProd);
             return window.location.href = 'https://' + hostname + plfProd;
+        }
+
+        if (hostname == "fenongyu.github.io" && pathname.startsWith(plfTest)) {
+            window.alert('https://' + hostname + plfTest);
+            return window.location.href = 'https://' + hostname + plfTest;
             //window.alert('hello');
         }
 
-        if (hostname == "fenongyu.github.io" &&
-                pathname.startsWith(plfTest)) {
-                window.alert('https://' + hostname + plfTest);
-                return window.location.href = 'https://' + hostname + plfTest;
-                //window.alert('hello');
-            }
-
-        if (hostname == "fenongyu.github.io" &&
-                pathname.startsWith(plfDev)) {
-                window.alert('https://' + hostname + plfDev);
-                return window.location.href = 'https://' + hostname + plfDev;
-                //window.alert('hello');
-            }
+        if (hostname == "fenongyu.github.io" && pathname.startsWith(plfDev)) {
+            window.alert('https://' + hostname + plfDev);
+            return window.location.href = 'https://' + hostname + plfDev;
+            //window.alert('hello');
+        }
 
     </script>
 </body>
