@@ -17,10 +17,21 @@
         window.location.href = "https://easy-shopper.com";
     }
 });
+  document.getElementById('copyButton').addEventListener('click', async () => {
+    const text = document.getElementById('textToCopy').innerText;
+    try {
+      await navigator.clipboard.writeText(text); // Async write to clipboard
+      alert('Text copied!');
+    } catch (err) {
+      console.error('Failed to copy', err);
+    }
+  });
 </script>
 <body>
     <h1>Hello World</h1>
     <p>I'm hosted with GitHub Pages.</p>
+    <p id="textToCopy">Text to copy</p>
+    <button id="copyButton">Copy Text</button>
 </body>
 
 </html>
