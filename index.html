@@ -20,10 +20,13 @@
   document.getElementById('copyButton').addEventListener('click', async () => {
     const text = document.getElementById('textToCopy').innerText;
     try {
-      await navigator.clipboard.writeText(text); // Async write to clipboard
-      alert('Text copied!');
+      const result = await navigator.permissions.query({ name: "clipboard-write" });
+      if (result.state === "granted" || result.state === "prompt") {
+        await navigator.clipboard.writeText(text); // Async write to clipboard
+        alert('Text copied!');
+      }
     } catch (err) {
-      console.error('Failed to copy', err);
+      console.error('Failed to copy:', err);
     }
   });
 </script>
