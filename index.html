@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html>
-<script>
-  document.addEventListener('DOMContentLoaded', async function() {
-    // Detect device
-    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    await navigator.clipboard.writeText("Hello world");
-    // Set up the redirects
-    if (/iPhone|iPad|iPod/i.test(userAgent) && !window.MSStream) {
-        // iOS device
-        window.location.href = "https://apps.apple.com/us/app/easy-shopper/id1152300615";
-    } else if (/android/i.test(userAgent)) {
-        // Android device
-        window.location.href = "https://play.google.com/store/apps/details?id=com.pentlandfirth.whizcart";
-    } else {
-        // Desktop or other devices
-        window.location.href = "https://easy-shopper.com";
-    }
-});
-  document.getElementById('copyButton').addEventListener('click', async () => {
-    const text = document.getElementById('textToCopy').innerText;
-    try {
-      const result = await navigator.permissions.query({ name: "clipboard-write" });
-      if (result.state === "granted" || result.state === "prompt") {
-        await navigator.clipboard.writeText(text); // Async write to clipboard
-        alert('Text copied!');
+<head>
+  <script>
+    document.addEventListener('DOMContentLoaded', async function() {
+      // Detect device
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      await navigator.clipboard.writeText("Hello world");
+      // Set up the redirects
+      if (/iPhone|iPad|iPod/i.test(userAgent) && !window.MSStream) {
+          // iOS device
+          window.location.href = "https://apps.apple.com/us/app/easy-shopper/id1152300615";
+      } else if (/android/i.test(userAgent)) {
+          // Android device
+          window.location.href = "https://play.google.com/store/apps/details?id=com.pentlandfirth.whizcart";
+      } else {
+          // Desktop or other devices
+          window.location.href = "https://easy-shopper.com";
       }
-    } catch (err) {
-      console.error('Failed to copy:', err);
-    }
   });
-</script>
+    document.getElementById('copyButton').addEventListener('click', async () => {
+      const text = document.getElementById('textToCopy').innerText;
+      try {
+        const result = await navigator.permissions.query({ name: "clipboard-write" });
+        if (result.state === "granted" || result.state === "prompt") {
+          await navigator.clipboard.writeText(text); // Async write to clipboard
+          alert('Text copied!');
+        }
+      } catch (err) {
+        console.error('Failed to copy:', err);
+      }
+    });
+  </script>
+</head>
 <body>
     <h1>Hello World</h1>
     <p>I'm hosted with GitHub Pages.</p>
