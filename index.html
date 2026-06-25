@@ -18,15 +18,16 @@
           //window.location.href = "https://easy-shopper.com";
       //}
   //});
-  document.getElementById('copyBtn').addEventListener('click', async () => {
-    const valueToCopy = "my parameter value";
-
-    try {
-      await navigator.clipboard.writeText(valueToCopy);
-      console.log("Copied to clipboard!");
-    } catch (err) {
-      console.error("Failed to copy:", err);
-    }
+  document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('copyBtn').addEventListener('click', async () => {
+      const valueToCopy = "my parameter value";
+      try {
+        await navigator.clipboard.writeText(valueToCopy);
+        console.log("Copied to clipboard!");
+      } catch (err) {
+        console.error("Failed to copy:", err);
+      }
+    });
   });
   </script>
 </head>
